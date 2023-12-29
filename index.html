@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- & icon -->
+    <link rel="icon" href="image/icon.png">
+    <!-- & font -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alegreya:wght@700&family=Amatic+SC:wght@700&family=Inter&family=Nanum+Gothic+Coding&family=Open+Sans&family=Pacifico&family=Rethink+Sans:ital@1&family=Roboto:wght@700&family=Rubik+Bubbles&family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alegreya:wght@700&family=Amatic+SC:wght@700&family=Inter&family=Open+Sans&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- & animation -->
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- & fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- & bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- & main -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- & media -->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body >
+    <div class="container" id="container">
+        <div class="form-cont sign-up">
+            <form name="myForm2" onsubmit="return validateForm2()">
+                <h1>"Create Account"</h1>
+                <div class="social">
+                    <a href="https://www.google.com/" target="_blank" class="social shad"><i class="fa-brands fa-google fa-beat"></i></a>
+                    <a href="https://web.facebook.com/" target="_blank" class="social shad"><i class="fa-brands fa-facebook-f fa-beat"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social shad"><i class="fa-brands fa-linkedin-in fa-beat"></i></a>
+                </div>
+                <input name="fname2" type="text" placeholder="Name" id="put1" onblur="nameValidation()">
+                  <i class="fa-regular fa-thumbs-up fa-beat-fade d-none" id="d-icon1"></i>
+                  <i class="fa-regular fa-thumbs-down fa-beat-fade d-none" id="n-icon1"></i>
+                <input name="femail2" type="email" placeholder="Email" id="put2" onblur="emailValidation()">
+                  <i class="fa-regular fa-thumbs-up fa-beat-fade d-none" id="d-icon2"></i>
+                  <i class="fa-regular fa-thumbs-down fa-beat-fade d-none" id="n-icon2"></i>
+                <input name="fpass2" type="password" placeholder="Password" id="put3" onblur="passwordValidation()">
+                  <i class="fa-regular fa-thumbs-up fa-beat-fade d-none" id="d-icon3"></i>
+                  <i class="fa-regular fa-thumbs-down fa-beat-fade d-none" id="n-icon3"></i>
+                <input name="frepass2" type="password" placeholder="re-enter password" id="put4" onblur="rePasswordValidation()">
+                  <i class="fa-regular fa-thumbs-up fa-beat-fade d-none" id="d-icon4"></i>
+                  <i class="fa-regular fa-thumbs-down fa-beat-fade d-none" id="n-icon4"></i>
+                <button class="bttn button"  type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-cont sign-in">
+            <form name="myForm" onsubmit="return validateForm()">
+                <h1>"Sign in"</h1>
+                <div class="social">
+                    <a href="https://www.google.com/" target="_blank" class="social shad"><i class="fa-brands fa-google fa-beat"></i></a>
+                    <a href="https://web.facebook.com/" target="_blank" class="social shad"><i class="fa-brands fa-facebook-f fa-beat"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="social shad"><i class="fa-brands fa-linkedin-in fa-beat"></i></a>
+                </div>
+                <input name="femail" type="email" placeholder="Email" id="email" oninput="typeEmail()" list="accEmail" onblur="valid1()">
+                       <datalist id="accEmail"></datalist>
+                <div class="alert alert-success d-none " role="alert" id="yes1">Valid <i class="fa-solid fa-check fa-shake"></i></div>
+                <div class="alert alert-danger d-none" role="alert" id="no1">Not Valid <i class="fa-solid fa-xmark fa-shake"></i></div>
+                <input name="fpass" type="password" placeholder="Password" id="password" onblur="valid2()">
+                <div class="alert alert-success d-none " role="alert" id="yes2">Valid <i class="fa-solid fa-check fa-shake"></i></div>
+                <div class="alert alert-danger d-none" role="alert" id="no2">Not Valid <i class="fa-solid fa-xmark fa-shake"></i></div>
+                <div class="chec">
+                    <input type="checkbox" id="HU" class="checed" onclick="clearo()">
+                    <label for="HU">Human</label>
+                </div>
+                <a href="html/sorry.html" target="_blank" class="anc">Forgot your password?</a>
+                <button class="bttn button"  type="submit" id="sign-in">
+                    <a href="html/open.html" class="d-none" id="linko">Sign In</a>...
+                </button>
+                <!-- <input type="button" class="bttn button com" value="Sign In" onclick="window.open('html/open.html')" disabled /> --> 
+            </form>
+        </div>
+        <div class="overlay1">
+            <div class="overlay2">
+                <div class="overlay3 left">
+                    <h1>Hello dear!</h1>
+                    <p>I am very happy to have you back. Please log in. <i class="fa-regular fa-face-smile-beam fa-bounce"></i></p>
+                    <button class="sign button" id="signIn">"Sign In"</button>
+                </div>
+                <div class="overlay3 right">
+                    <h1>welcome!</h1>
+                    <p>Enter your personal data , to become one of us. <i class="fa-regular fa-face-smile-wink fa-bounce"></i></p>
+                    <button class="sign button" id="signUp">"Sign Up"</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
